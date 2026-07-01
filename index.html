@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>e-KAUNSELOR SMART HUB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+<header class="nav">
+  <div class="brand" onclick="goPage('home')"><span class="dot"></span> e-KAUNSELOR SMART HUB</div>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+  <nav class="menu" id="menu">
+    <div class="nav-item">
+      <button class="nav-btn" data-page="home" onclick="goPage('home')">Home</button>
+    </div>
+    <div class="nav-item" id="modulItem">
+      <button class="nav-btn" onclick="toggleDropdown('modulItem')">Modul Teori <span class="caret">&#9660;</span></button>
+      <div class="dropdown">
+        <button onclick="openTeori('rogers')">Person-Centered (Rogers)</button>
+        <button onclick="openTeori('cbt')">Kognitif Tingkah Laku (CBT)</button>
+        <button onclick="openTeori('realiti')">Teori Realiti</button>
+        <button onclick="openTeori('psiko')">Psikoanalisis</button>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button class="nav-btn" data-page="tools" onclick="goPage('tools')">Thinking Tools</button>
+    </div>
+    <div class="nav-item">
+      <button class="nav-btn" data-page="reflect" onclick="goPage('reflect')">Reflection</button>
+    </div>
+    <div class="nav-item">
+      <button class="nav-btn" data-page="quiz" onclick="goPage('quiz')">Quiz</button>
+    </div>
+  </nav>
+</header>
+ 
+<main>
+ 
+  <!-- ================= HOME ================= -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Objek Pembelajaran Digital Interaktif</span>
+        <h1>Baca Bijak, Fikir Kritis,<br><span>Bina Kemahiran Kaunseling.</span></h1>
+        <p>e-KAUNSELOR SMART HUB membantu anda mengenal teori kaunseling utama, menganalisis kes sebenar, dan membina kemahiran berfikir kritis melalui 4 alat kemahiran berfikir.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <button class="btn" onclick="goPage('home'); openTeori('rogers')">Mula Pembelajaran &rarr;</button>
+          <button class="btn ghost" onclick="goPage('tools')">Lihat Thinking Tools</button>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-deco">
+          <span class="deco-badge">🧠 Fikir Kritis</span>
+          <span class="deco-badge two">💬 Empati</span>
+          <span class="deco-badge three">🎯 Bina Kemahiran</span>
+          <div class="deco-ring"></div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="quick-grid">
+      <div class="quick-card" onclick="goPage('home'); openTeori('rogers')">
+        <span class="ic">📘</span><span class="label">Belajar Konsep</span>
+      </div>
+      <div class="quick-card" onclick="goPage('tools')">
+        <span class="ic">🧠</span><span class="label">Fikir & Analisis</span>
+      </div>
+      <div class="quick-card" onclick="goPage('reflect')">
+        <span class="ic">📝</span><span class="label">Catat & Organisasi</span>
+      </div>
+      <div class="quick-card" onclick="goPage('quiz')">
+        <span class="ic">✅</span><span class="label">Refleksi & Penilaian</span>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ================= MODUL TEORI ================= -->
+  <section class="page" id="page-modul">
+    <span class="eyebrow">Modul Teori</span>
+    <h2>Teori Utama Kaunseling</h2>
+    <div class="teori-layout">
+      <div class="teori-list">
+        <button class="teori-btn active" data-t="rogers" onclick="openTeori('rogers')">1. Person-Centered</button>
+        <button class="teori-btn" data-t="cbt" onclick="openTeori('cbt')">2. Kognitif Tingkah Laku (CBT)</button>
+        <button class="teori-btn" data-t="realiti" onclick="openTeori('realiti')">3. Teori Realiti</button>
+        <button class="teori-btn" data-t="psiko" onclick="openTeori('psiko')">4. Psikoanalisis</button>
+      </div>
+ 
+      <div>
+        <div class="teori-panel active" id="t-rogers">
+          <div class="card">
+            <h3>Teori Person-Centered (Carl Rogers)</h3>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/o7mhCccmwXE" title="Person-Centered Therapy" allowfullscreen></iframe>
+            </div>
+            <div class="video-actions">
+              <a class="btn ghost" href="https://www.youtube.com/watch?v=o7mhCccmwXE" target="_blank" rel="noopener">▶ Tonton Video di YouTube</a>
+            </div>
+            <ul class="concept-list">
+              <li>Fokus kepada individu dan pengalaman subjektif klien</li>
+              <li>Kepercayaan terhadap potensi diri klien untuk berkembang</li>
+              <li>Tiga keadaan teras: Empati, Penerimaan Tanpa Syarat, Ketulenan (Genuineness)</li>
+              <li>Matlamat: Perkembangan diri dan aktualisasi kendiri</li>
+            </ul>
+            <div class="nota-box">
+              <p>📄 Nota Ringkas — Teori Person-Centered</p>
+              <a class="btn ghost" href="assets/images/nota-person-centered.png" target="_blank" rel="noopener">🔍 Lihat Nota Penuh</a>
+            </div>
+            <img src="assets/images/nota-person-centered.png" alt="Nota Ringkas Person-Centered" class="nota-preview" onclick="window.open('assets/images/nota-person-centered.png','_blank')">
+          </div>
+        </div>
+ 
+        <div class="teori-panel" id="t-cbt">
+          <div class="card">
+            <h3>Teori Kognitif Tingkah Laku (CBT)</h3>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/RVFuR_eZN4s" title="CBT Therapy" allowfullscreen></iframe>
+            </div>
+            <div class="video-actions">
+              <a class="btn ghost" href="https://www.youtube.com/watch?v=RVFuR_eZN4s" target="_blank" rel="noopener">▶ Tonton Video di YouTube</a>
+            </div>
+            <ul class="concept-list">
+              <li>Pemikiran negatif mempengaruhi emosi dan tingkah laku</li>
+              <li>Mengenal pasti dan mencabar pemikiran tidak rasional</li>
+              <li>Teknik: Penstrukturan semula kognitif, latihan tingkah laku</li>
+              <li>Matlamat: Mengubah corak pemikiran untuk mengubah tingkah laku</li>
+            </ul>
+            <div class="nota-box">
+              <p>📄 Nota Ringkas — Teori CBT</p>
+              <a class="btn ghost" href="assets/images/nota-cbt.png" target="_blank" rel="noopener">🔍 Lihat Nota Penuh</a>
+            </div>
+            <img src="assets/images/nota-cbt.png" alt="Nota Ringkas CBT" class="nota-preview" onclick="window.open('assets/images/nota-cbt.png','_blank')">
+          </div>
+        </div>
+ 
+        <div class="teori-panel" id="t-realiti">
+          <div class="card">
+            <h3>Teori Realiti (William Glasser)</h3>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/-pnkn-gkD2k" title="Reality Therapy" allowfullscreen></iframe>
+            </div>
+            <div class="video-actions">
+              <a class="btn ghost" href="https://www.youtube.com/watch?v=-pnkn-gkD2k" target="_blank" rel="noopener">▶ Tonton Video di YouTube</a>
+            </div>
+            <ul class="concept-list">
+              <li>Tingkah laku adalah pilihan individu untuk memenuhi keperluan asas</li>
+              <li>Lima keperluan asas: kelangsungan hidup, kasih sayang, kuasa, kebebasan, keseronokan</li>
+              <li>Fokus kepada tanggungjawab dan masa kini, bukan masa lalu</li>
+              <li>Matlamat: Membantu klien membuat pilihan yang lebih efektif</li>
+            </ul>
+            <div class="nota-box">
+              <p>📄 Nota Ringkas — Teori Realiti</p>
+              <a class="btn ghost" href="assets/images/nota-realiti.png" target="_blank" rel="noopener">🔍 Lihat Nota Penuh</a>
+            </div>
+            <img src="assets/images/nota-realiti.png" alt="Nota Ringkas Realiti" class="nota-preview" onclick="window.open('assets/images/nota-realiti.png','_blank')">
+          </div>
+        </div>
+ 
+        <div class="teori-panel" id="t-psiko">
+          <div class="card">
+            <h3>Teori Psikoanalisis (Sigmund Freud)</h3>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/ouAhMyxJb04" title="Psychoanalysis Theory" allowfullscreen></iframe>
+            </div>
+            <div class="video-actions">
+              <a class="btn ghost" href="https://www.youtube.com/watch?v=ouAhMyxJb04" target="_blank" rel="noopener">▶ Tonton Video di YouTube</a>
+            </div>
+            <ul class="concept-list">
+              <li>Tingkah laku dipengaruhi oleh proses tidak sedar (unconscious)</li>
+              <li>Struktur personaliti: Id, Ego, Superego</li>
+              <li>Mekanisme pertahanan diri (defense mechanisms)</li>
+              <li>Matlamat: Menyedarkan klien tentang konflik dalaman yang tidak disedari</li>
+            </ul>
+            <div class="nota-box">
+              <p>📄 Nota Ringkas — Teori Psikoanalisis</p>
+              <a class="btn ghost" href="assets/images/nota-psikoanalisis.png" target="_blank" rel="noopener">🔍 Lihat Nota Penuh</a>
+            </div>
+            <img src="assets/images/nota-psikoanalisis.png" alt="Nota Ringkas Psikoanalisis" class="nota-preview" onclick="window.open('assets/images/nota-psikoanalisis.png','_blank')">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ================= THINKING TOOLS ================= -->
+  <section class="page" id="page-tools">
+    <span class="eyebrow">Thinking Tools Zone</span>
+    <h2>4 Alat Kemahiran Berfikir</h2>
+    <div class="tools-grid">
+      <div class="tool-card" onclick="openTool('bulatan')">
+        <div class="icon">🧩</div>
+        <h3>Peta Bulatan</h3>
+        <p>Brainstorming — terokai idea awal tentang topik.</p>
+      </div>
+      <div class="tool-card" onclick="openTool('pokok')">
+        <div class="icon">🌳</div>
+        <h3>Peta Pokok</h3>
+        <p>Mengorganisasi — susun maklumat secara sistematik.</p>
+      </div>
+      <div class="tool-card" onclick="openTool('alir')">
+        <div class="icon">🔀</div>
+        <h3>Peta Alir</h3>
+        <p>Membuat keputusan — lalukan proses membuat keputusan.</p>
+      </div>
+      <div class="tool-card" onclick="openTool('dakap')">
+        <div class="icon">🔗</div>
+        <h3>Peta Dakap</h3>
+        <p>Menghubung idea — hubungkan konsep utama dengan idea lain.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAP MODAL ================= -->
+  <div class="map-overlay" id="mapOverlay">
+    <div class="map-box">
+      <div class="map-box-header">
+        <h3 id="mapTitle">Peta</h3>
+        <div class="hbtns">
+          <button class="btn ghost" onclick="printMap()">🖨 Cetak Jawapan</button>
+          <button class="btn ghost" onclick="closeMap()">✕ Tutup</button>
+        </div>
+      </div>
+      <div class="map-body">
+
+        <!-- ── PETA BULATAN ── -->
+        <div class="map-view" id="mv-bulatan">
+          <p class="map-desc">Letakkan <strong>Topik Utama</strong> di tengah bulatan (statik). <strong>Seret</strong> kotak idea (guna pemegang ⠿) untuk gerakkannya di dalam gelang bulatan — ia tidak boleh keluar dari sempadan bulatan. Tambah atau buang kotak mengikut keperluan.</p>
+          <div style="overflow-x:auto; text-align:center;">
+            <div class="bulatan-outer" id="bulatan-outer">
+              <div class="bulatan-inner-ring" aria-hidden="true"></div>
+              <div class="bulatan-center-wrap">
+                <label>Topik Utama</label>
+                <textarea class="map-input bulatan-topic" id="bulatan-topic" placeholder="Topik..."></textarea>
+              </div>
+              <div class="idea-node" data-idx="1">
+                <div class="node-handle drag-handle" title="Seret idea">⠿</div>
+                <textarea class="map-input" placeholder="Idea 1"></textarea>
+                <button class="del-btn" onclick="this.closest('.idea-node').remove()">×</button>
+              </div>
+              <div class="idea-node" data-idx="2">
+                <div class="node-handle drag-handle" title="Seret idea">⠿</div>
+                <textarea class="map-input" placeholder="Idea 2"></textarea>
+                <button class="del-btn" onclick="this.closest('.idea-node').remove()">×</button>
+              </div>
+              <div class="idea-node" data-idx="3">
+                <div class="node-handle drag-handle" title="Seret idea">⠿</div>
+                <textarea class="map-input" placeholder="Idea 3"></textarea>
+                <button class="del-btn" onclick="this.closest('.idea-node').remove()">×</button>
+              </div>
+              <div class="idea-node" data-idx="4">
+                <div class="node-handle drag-handle" title="Seret idea">⠿</div>
+                <textarea class="map-input" placeholder="Idea 4"></textarea>
+                <button class="del-btn" onclick="this.closest('.idea-node').remove()">×</button>
+              </div>
+            </div>
+          </div>
+          <div class="add-row"><button class="btn ghost" onclick="addBulatan()">+ Tambah Idea</button></div>
+        </div>
+
+        <!-- ── PETA POKOK ── -->
+        <div class="map-view" id="mv-pokok">
+          <p class="map-desc">Isi <strong>Tajuk Utama</strong> di atas. Tambah <strong>Kategori</strong> dan <strong>Sub-item</strong> di bawahnya. <strong>Seret</strong> pemegang ⠿ untuk susun semula kategori (kekal sebaris) atau sub-item (kekal dalam kategori sendiri). Boleh tambah atau buang mengikut keperluan.</p>
+          <div class="pokok-root">
+            <textarea class="map-input pokok-root-input" id="pokok-root" placeholder="Tajuk Utama / Konsep Pokok"></textarea>
+          </div>
+          <div class="pokok-connector">▼</div>
+          <div class="pokok-branches" id="pokok-branches">
+            <div class="pokok-branch">
+              <div class="branch-top">
+                <div class="drag-handle branch-handle" title="Seret kategori">⠿</div>
+                <textarea class="map-input branch-cat" placeholder="Kategori 1"></textarea>
+                <button class="del-branch-btn" onclick="this.closest('.pokok-branch').remove()">× Buang</button>
+              </div>
+              <div class="branch-divider"></div>
+              <div class="branch-subs">
+                <div class="sub-item"><div class="drag-handle sub-handle" title="Seret sub-item">⠿</div><textarea class="map-input sub-input" placeholder="Sub-item"></textarea><button class="del-btn" onclick="this.closest('.sub-item').remove()">×</button></div>
+                <div class="sub-item"><div class="drag-handle sub-handle" title="Seret sub-item">⠿</div><textarea class="map-input sub-input" placeholder="Sub-item"></textarea><button class="del-btn" onclick="this.closest('.sub-item').remove()">×</button></div>
+              </div>
+              <button class="add-sub-btn" onclick="addSub(this)">+ Sub-item</button>
+            </div>
+            <div class="pokok-branch">
+              <div class="branch-top">
+                <div class="drag-handle branch-handle" title="Seret kategori">⠿</div>
+                <textarea class="map-input branch-cat" placeholder="Kategori 2"></textarea>
+                <button class="del-branch-btn" onclick="this.closest('.pokok-branch').remove()">× Buang</button>
+              </div>
+              <div class="branch-divider"></div>
+              <div class="branch-subs">
+                <div class="sub-item"><div class="drag-handle sub-handle" title="Seret sub-item">⠿</div><textarea class="map-input sub-input" placeholder="Sub-item"></textarea><button class="del-btn" onclick="this.closest('.sub-item').remove()">×</button></div>
+                <div class="sub-item"><div class="drag-handle sub-handle" title="Seret sub-item">⠿</div><textarea class="map-input sub-input" placeholder="Sub-item"></textarea><button class="del-btn" onclick="this.closest('.sub-item').remove()">×</button></div>
+              </div>
+              <button class="add-sub-btn" onclick="addSub(this)">+ Sub-item</button>
+            </div>
+            <div class="pokok-branch">
+              <div class="branch-top">
+                <div class="drag-handle branch-handle" title="Seret kategori">⠿</div>
+                <textarea class="map-input branch-cat" placeholder="Kategori 3"></textarea>
+                <button class="del-branch-btn" onclick="this.closest('.pokok-branch').remove()">× Buang</button>
+              </div>
+              <div class="branch-divider"></div>
+              <div class="branch-subs">
+                <div class="sub-item"><div class="drag-handle sub-handle" title="Seret sub-item">⠿</div><textarea class="map-input sub-input" placeholder="Sub-item"></textarea><button class="del-btn" onclick="this.closest('.sub-item').remove()">×</button></div>
+              </div>
+              <button class="add-sub-btn" onclick="addSub(this)">+ Sub-item</button>
+            </div>
+          </div>
+          <div class="add-row"><button class="btn ghost" onclick="addBranch()">+ Tambah Kategori</button></div>
+        </div>
+
+        <!-- ── PETA ALIR ── -->
+        <div class="map-view" id="mv-alir">
+          <p class="map-desc">Isi setiap langkah dalam proses keputusan secara berurutan dari kiri ke kanan. <strong>Seret</strong> pemegang ⠿ untuk susun semula turutan langkah — aliran kekal satu arah (tiada cabang/gelung). Tambah atau buang langkah mengikut keperluan.</p>
+          <div class="alir-flow" id="alir-flow">
+            <div class="alir-step">
+              <div class="step-box">
+                <div class="drag-handle step-handle" title="Seret langkah">⠿</div>
+                <textarea class="map-input step-input" placeholder="Langkah 1"></textarea>
+                <button class="del-btn" onclick="delAlir(this)">×</button>
+              </div>
+              <div class="alir-arrow">→</div>
+            </div>
+            <div class="alir-step">
+              <div class="step-box">
+                <div class="drag-handle step-handle" title="Seret langkah">⠿</div>
+                <textarea class="map-input step-input" placeholder="Langkah 2"></textarea>
+                <button class="del-btn" onclick="delAlir(this)">×</button>
+              </div>
+              <div class="alir-arrow">→</div>
+            </div>
+            <div class="alir-step">
+              <div class="step-box">
+                <div class="drag-handle step-handle" title="Seret langkah">⠿</div>
+                <textarea class="map-input step-input" placeholder="Langkah 3"></textarea>
+                <button class="del-btn" onclick="delAlir(this)">×</button>
+              </div>
+            </div>
+          </div>
+          <div class="add-row"><button class="btn ghost" onclick="addAlir()">+ Tambah Langkah</button></div>
+        </div>
+
+        <!-- ── PETA DAKAP ── -->
+        <div class="map-view" id="mv-dakap">
+          <p class="map-desc">Isi <strong>Konsep Utama / Keseluruhan</strong> di kiri. Isi bahagian-bahagiannya di kanan. <strong>Seret</strong> pemegang ⠿ untuk susun semula turutan bahagian — hubungan keseluruhan → bahagian kekal tidak berubah. Tambah atau buang bahagian mengikut keperluan.</p>
+          <div class="dakap-layout">
+            <div class="dakap-main-wrap">
+              <label style="display:block;font-size:0.7rem;font-weight:700;color:var(--plum-deep);margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;">Keseluruhan</label>
+              <textarea class="map-input dakap-main-input" id="dakap-main" placeholder="Konsep Utama / Keseluruhan..."></textarea>
+            </div>
+            <svg class="dakap-brace-svg" width="44" height="200" viewBox="0 0 44 200" id="dakap-brace-svg">
+              <path d="M38,6 Q14,6 14,52 L14,96 Q14,100 6,100 Q14,100 14,104 L14,148 Q14,194 38,194" fill="none" stroke="var(--lilac-deep)" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <label style="display:block;font-size:0.7rem;font-weight:700;color:var(--plum-deep);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;">Bahagian-Bahagian</label>
+              <div class="dakap-parts" id="dakap-parts">
+                <div class="dakap-part"><div class="drag-handle part-handle" title="Seret bahagian">⠿</div><textarea class="map-input dakap-part-input" placeholder="Bahagian 1"></textarea><button class="del-btn" onclick="this.closest('.dakap-part').remove(); resizeDakapBrace()">×</button></div>
+                <div class="dakap-part"><div class="drag-handle part-handle" title="Seret bahagian">⠿</div><textarea class="map-input dakap-part-input" placeholder="Bahagian 2"></textarea><button class="del-btn" onclick="this.closest('.dakap-part').remove(); resizeDakapBrace()">×</button></div>
+                <div class="dakap-part"><div class="drag-handle part-handle" title="Seret bahagian">⠿</div><textarea class="map-input dakap-part-input" placeholder="Bahagian 3"></textarea><button class="del-btn" onclick="this.closest('.dakap-part').remove(); resizeDakapBrace()">×</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="add-row"><button class="btn ghost" onclick="addDakap()">+ Tambah Bahagian</button></div>
+        </div>
+
+      </div><!-- end map-body -->
+    </div><!-- end map-box -->
+  </div><!-- end map-overlay -->
+ 
+  <!-- ================= REFLECTION ================= -->
+<!-- ================= REFLECTION ================= -->
+<section class="page" id="page-reflect">
+  <span class="eyebrow">Reflection Journal</span>
+  <h2>Refleksi Pembelajaran</h2>
+
+  <div class="card reflect-simple">
+
+    <p style="color:var(--ink-soft); max-width:520px; margin:0 auto 25px;">
+      Luangkan masa sejenak untuk merenung kembali apa yang telah anda pelajari sepanjang modul ini. Sila isi borang refleksi di bawah untuk berkongsi pengalaman pembelajaran anda.
+    </p>
+      
+    <a class="btn"
+       href="https://forms.gle/92bpcCB7WQk8hu4C6"
+       target="_blank"
+       rel="noopener"
+       style="display:inline-block; margin-top:10px;">
+       📝 Isi Refleksi
+    </a>
+
+    <div class="qr-box">
+      <img src="assets/images/qr-refleksi.jpeg" alt="QR Code Refleksi">
+      <p>Imbas QR untuk Isi Refleksi</p>
+    </div>
+
+  </div>
+</section>
+  <!-- ================= QUIZ ================= -->
+<section class="page" id="page-quiz">
+  <span class="eyebrow">Quiz Interaktif</span>
+  <h2>Kuiz Pemahaman</h2>
+
+  <!-- Kuiz Website -->
+  <div class="card quiz-card">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div id="quizArea"></div>
+
+    <div class="quiz-nav">
+      <button class="btn ghost" onclick="prevQuestion()">Sebelum</button>
+      <button class="btn" onclick="nextQuestion()">Seterusnya</button>
+    </div>
+  </div>
+
+  <!-- Gemini -->
+  <div class="card" style="margin-top:25px; text-align:center;">
+    <h3>📚 Kuiz Tambahan</h3>
+
+    <p style="color:var(--ink-soft); max-width:600px; margin:10px auto 20px;">
+      Ingin menguji kefahaman anda dengan lebih lanjut? Imbas kod QR di bawah untuk mengakses kuiz tambahan.
+    </p>
+
+    <!-- Tukar link Google Form di sini -->
+    <a class="btn"
+       href="https://share.gemini.google/uP4ir61FAVDg"
+       target="_blank"
+       rel="noopener">
+       📄 Jawab Kuiz 
+    </a>
+
+    <div class="qr-box" style="margin-top:20px;">
+      <!-- Tukar kepada nama fail QR awak -->
+      <img src="assets/images/qr-quiz.png"
+           alt="QR Code Kuiz"
+           style="width:180px; max-width:100%;">
+
+      <p style="margin-top:10px;">
+        Imbas QR untuk menjawab kuiz melalui Google Form.
+      </p>
+    </div>
+  </div>
+
+</section>
+<footer>e-KAUNSELOR SMART HUB &copy; 2026 — Baca Bijak, Fikir Kritis, Bina Kemahiran Kaunseling.</footer>
+ 
+
+<script src="script.js" defer></script>
+</body>
+</html>
